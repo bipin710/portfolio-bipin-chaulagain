@@ -1,0 +1,152 @@
+/* General Contact Section */
+#contact {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Left Section Styling */
+.leftcontact {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(2px 2px 10px rgb(0, 183, 255));
+}
+
+.leftcontact img {
+    width: 60%; /* Adjusted width for better presentation */
+}
+
+/* Right Section Styling */
+.rightcontact {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    width: 90%;
+    max-width: 400px; /* Ensures the form doesn't stretch too wide */
+    background-color: rgb(19, 25, 29);
+    box-shadow: 2px 2px 10px black, 2px 2px 20px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 20px;
+    border-radius: 10px;
+}
+
+/* Hover effect for form */
+form:hover {
+    box-shadow: 2px 2px 10px rgb(67, 158, 181), 2px 2px 20px rgb(40, 92, 134);
+}
+
+/* Form Input Styling */
+form input,
+#textarea {
+    width: 100%;
+    height: 50px;
+    border: 2px solid rgb(105, 208, 215);
+    border-radius: 20px;
+    padding: 10px 20px;
+    outline: none;
+    font-size: 16px;
+}
+
+/* Textarea Styling */
+#textarea {
+    height: 150px; /* Adjusted height for a better user experience */
+}
+
+/* Submit Button Styling */
+#btn {
+    width: 120px;
+    height: 50px;
+    border: 2px solid rgb(105, 208, 215);
+    border-radius: 20px;
+    background-color: transparent;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Submit Button Hover Effect */
+#btn:hover {
+    background-color: rgb(105, 208, 215);
+    color: black;
+    transform: scale(1.1);
+}
+
+/* Media Query for Devices with 750px or Smaller Width */
+@media (max-width: 750px) {
+    /* Contact Section */
+    #contact {
+        flex-direction: column; /* Stack sections vertically */
+        height: auto; /* Let the height adjust according to content */
+    }
+
+    /* Left Section */
+    .leftcontact {
+        width: 100%; /* Full width */
+        height: auto; /* Let the height adjust according to content */
+        padding: 20px; /* Add some padding */
+        justify-content: flex-start; /* Align content at the top */
+    }
+
+    .leftcontact img {
+        width: 70%; /* Slightly smaller image size */
+        max-width: 100%; /* Prevent image from overflowing */
+    }
+
+    /* Right Section */
+    .rightcontact {
+        width: 100%; /* Full width */
+        height: auto; /* Let the height adjust according to content */
+        padding: 20px; /* Add some padding */
+        justify-content: flex-start; /* Align form at the top */
+    }
+
+    /* Form Styling */
+    form {
+        width: 100%; /* Full width */
+        max-width: 450px; /* Adjust max-width for small screens */
+        padding: 20px; /* Reduce padding for better fit */
+        box-shadow: 2px 2px 10px black, 2px 2px 20px black;
+    }
+
+    /* Input and Textarea Styling */
+    form input,
+    #textarea {
+        height: 45px; /* Reduce input height for smaller screens */
+        font-size: 14px; /* Slightly smaller font size */
+    }
+
+    #textarea {
+        height: 130px; /* Reduce textarea height */
+    }
+
+    /* Submit Button Styling */
+    #btn {
+        width: 100%; /* Full width */
+        height: 45px; /* Adjust button height */
+        font-size: 14px; /* Slightly smaller font size */
+    }
+
+    /* Hover Effect for Submit Button */
+    #btn:hover {
+        background-color: rgb(105, 208, 215);
+        color: black;
+        transform: scale(1.05); /* Slightly smaller scale on hover */
+    }
+}

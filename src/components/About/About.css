@@ -1,0 +1,114 @@
+#about {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap; /* Allow the items to wrap when the screen is smaller */
+}
+
+.circle-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.leftabout {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(16, 79, 132);
+    box-shadow: 2px 2px 20px rgb(16, 79, 132);
+}
+
+.line {
+    width: 2px;
+    height: 120px;
+    background-color: rgb(16, 79, 132);
+    box-shadow: 2px 2px 20px rgb(16, 79, 132);
+}
+
+.aboutdetails {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+}
+
+.aboutdetails ul {
+    list-style: none;
+}
+
+.aboutdetails h1 {
+    background: linear-gradient(to right, rgb(205, 87, 66), white);
+    background-clip: text;
+    color: transparent;
+}
+
+.aboutdetails li {
+    color: white;
+}
+
+.aboutdetails span {
+    color: rgb(29, 167, 160);
+}
+
+.rightabout {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Media query for devices smaller than 750px */
+@media (max-width: 750px) {
+    #about {
+        flex-direction: column;
+        height: auto; /* Allow for content height adjustments */
+    }
+    
+    .leftabout, .rightabout {
+        width: 100%;
+        padding: 10%; /* Padding for spacing */
+        box-sizing: border-box; /* Include padding in the width/height */
+    }
+    
+    .leftabout {
+        gap: 20px; /* Adjust gap for small screens */
+    }
+    
+    .circle {
+        width: 50px; /* Smaller circles on mobile */
+        height: 50px;
+    }
+    
+    .line {
+        height: 80px; /* Smaller line for mobile */
+    }
+
+    .aboutdetails {
+        gap: 20px; /* Adjust gap for small screens */
+    }
+
+    .aboutdetails h1 {
+        font-size: 1.8rem; /* Smaller heading font size for mobile */
+    }
+
+    .aboutdetails li {
+        font-size: 1rem; /* Adjust font size for smaller devices */
+    }
+
+    .rightabout {
+        gap: 15px; /* Reduce gap for mobile screens */
+    }
+}
